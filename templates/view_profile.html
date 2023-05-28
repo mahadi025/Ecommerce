@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/css/view_profile.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Profile</title>
+</head>
+<body>
+    <div id="header">
+        <br>
+        <a href="{{ url_for('home') }}" id="back"><img src="static/images/back button.png" id="backbtn"></a>
+    </div>
+    <div id="img-profile">
+        <img src="static/images/{{(customer.image)}}" alt="">
+    </div>
+    <div id="table">
+        <table id="info">
+            <tr>
+                <th>Name:</th>
+                <td>{{customer.name}}</td>
+            </tr>
+            <tr>
+                <th>User ID:</th>
+                <td>{{customer.user.username}}</td>
+            </tr>
+            <tr>
+                <th>E-mail:</th>
+                <td>{{customer.email}}</td>
+            </tr>
+            <tr>
+                <th>Phone Number:</th>
+                <td>{{customer.phone}}</td>
+            </tr>
+
+        </table>
+        <a id="info" class="btn btn-outline-success" href="{{ url_for('edit_profile')}}">Edit Profile</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Edit Profile</title>
+	<link rel="stylesheet" type="text/css" href="static/css/edit_profile.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+	<div id="header">
+		<br>
+		<a href="{{ url_for('view_profile') }}" id="back"><img src="static/images/back button.png" id="backbtn"></a>
+	</div>
+	<div id="img-profile">
+		<img src="static/images/{{(customer.image)}}" alt="">
+	</div>
+		<div>
+			<form method="POST" enctype="multipart/form-data">
+				<table>
+					{{ form.hidden_tag() }}
+					<tr><th>Name</th>
+						<td>{{form.name}}</td>
+					</tr>
+					<tr>
+						<th>{{form.email.label}}</th>
+						<td>{{form.email}}</td>
+					</tr>
+
+					<tr>
+						<th>{{form.phone.label}}</th>
+						<td>{{form.phone}}</td>
+					</tr>
+
+					<tr>
+						<th>{{form.image.label}}</th>
+						<td>{{form.image}}</td>
+					</tr>
+				<table>
+					<td><button type="submit" class="btn btn-primary">Save</button></td>
+			</form>
+		</div>
+</body>
+</html>
+
+
+
+
