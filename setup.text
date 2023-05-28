@@ -1,0 +1,13 @@
+How to run
+
+1. Download the zip file.
+2. Extract the zip file.
+3. Download MOngoDB.
+4. Create a database in MogoDB named "ecommerce.
+5. Install flask using pip "pip install flask".
+6. Install flask_login using "pip install flask_login".
+7. Install pymongo using "pip install pymongo".
+8. Now Run the main.py.
+	P.S Make sure that mongodb is connected.
+	You may need to install other library just run the main.py file and if you any of module missing just install them using pip.
+	

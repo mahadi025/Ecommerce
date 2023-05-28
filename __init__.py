@@ -17,7 +17,7 @@ app = Flask(__name__)
 app.secret_key = 'super secret key'
 app.config['DEBUG'] = True
 app.config['MONGODB_SETTINGS'] = {
-    'db': 'ecommerce-test',
+    'db': 'ecommerce',
     'host': 'localhost',
     'port': 27017
 }
